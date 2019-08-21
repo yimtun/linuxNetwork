@@ -1,0 +1,511 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>icmp 重定向 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../dummy/dummy.html" />
+    
+    
+    <link rel="prev" href="../router/router.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../iptables/iptables.html">
+            
+                <a href="../iptables/iptables.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../iptables/add-rules.html">
+            
+                <a href="../iptables/add-rules.html">
+            
+                    
+                    add rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../iptables/snat.html">
+            
+                <a href="../iptables/snat.html">
+            
+                    
+                    snat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../iptables/delete-table.html">
+            
+                <a href="../iptables/delete-table.html">
+            
+                    
+                    清除表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ip/ip.html">
+            
+                <a href="../ip/ip.html">
+            
+                    
+                    ip 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../arp/arp.html">
+            
+                <a href="../arp/arp.html">
+            
+                    
+                    arp 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../brctl/brctl.html">
+            
+                <a href="../brctl/brctl.html">
+            
+                    
+                    brctl 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../kvm/kvm-nat.html">
+            
+                <a href="../kvm/kvm-nat.html">
+            
+                    
+                    kvm 虚拟机 不走网关到一个宿主机的地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../router/router.html">
+            
+                <a href="../router/router.html">
+            
+                    
+                    router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="icmp.html">
+            
+                <a href="icmp.html">
+            
+                    
+                    icmp 重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dummy/dummy.html">
+            
+                <a href="../dummy/dummy.html">
+            
+                    
+                    dummy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../basic/basic.html">
+            
+                <a href="../basic/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >icmp 重定向</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>kvm &#x5BBF;&#x4E3B;&#x673A;</p>
+<p>kvm &#x5BBF;&#x4E3B;&#x673A; &#x6E05;&#x9664;&#x5173;&#x4E8E; 203.0.113.0/24 &#x7F51;&#x6BB5;&#x7684; iptables &#x914D;&#x7F6E; &#x548C; &#x8DEF;&#x7531;&#x914D;&#x7F6E;</p>
+<pre><code>iptables -L -n -t nat --line-number
+iptables -L -n -t filter --line-number
+iptables -L -n -t raw --line-number
+iptables -L -n -t mangle --line-number
+ip route show
+</code></pre><pre><code>cat /etc/sysconfig/network-scripts/ifcfg-eth0 
+DEVICE=eth0
+ONBOOT=yes
+BRIDGE=br0
+</code></pre><pre><code>cat /etc/sysconfig/network-scripts/ifcfg-br0 
+DEVICE=br0
+ONBOOT=yes
+BOOTPROTO=static
+NM_CONTROLLED=no
+IPADDR=192.168.1.100
+GATEWAY=192.168.1.1
+NETMASK=255.255.255.0
+DNS1=223.5.5.5
+USERCTL=no
+TYPE=Bridge
+</code></pre><pre><code>cat /etc/sysconfig/network-scripts/ifcfg-br1 
+DEVICE=br1
+ONBOOT=yes
+BOOTPROTO=static
+NM_CONTROLLED=no
+USERCTL=no
+TYPE=Bridge
+</code></pre><p>kvm  network</p>
+<pre><code>virsh net-list
+ Name                 State      Autostart     Persistent
+----------------------------------------------------------
+ br0                  active     yes           yes
+ br1                  active     yes           yes
+</code></pre><pre><code>cat /etc/libvirt/qemu/networks/br0.xml 
+&lt;network&gt;
+  &lt;name&gt;br0&lt;/name&gt;
+  &lt;uuid&gt;25890db9-4091-4d23-9f39-1ab8536271cf&lt;/uuid&gt;
+  &lt;forward mode=&apos;bridge&apos;/&gt;
+  &lt;bridge name=&apos;br0&apos;/&gt;
+&lt;/network&gt;
+</code></pre><pre><code>cat /etc/libvirt/qemu/networks/br1.xml 
+&lt;network&gt;
+  &lt;name&gt;br1&lt;/name&gt;
+  &lt;uuid&gt;0f54af04-e735-4a75-a40e-61fb2393f6a9&lt;/uuid&gt;
+  &lt;forward mode=&apos;bridge&apos;/&gt;
+  &lt;bridge name=&apos;br1&apos;/&gt;
+&lt;/network&gt;
+</code></pre><p>vm1   use kvm br1 net</p>
+<pre><code>203.0.113.229 gw 203.0.113.1
+</code></pre><p>vm2  router1  use kvm br1 net</p>
+<pre><code>203.0.113.1 gw 203.0.113.2
+</code></pre><pre><code>ip addr add 203.0.113.1/24 dev eth0
+ip route add default via 203.0.113.2 dev eth0
+echo 1 &gt;  /proc/sys/net/ipv4/ip_forward
+</code></pre><p>vm3 use  eth0 use kvm br0 net eth1 use kvm br1 net</p>
+<pre><code>eth0 
+192.168.1.101/24  gw 192.168.1.1
+
+eth1 
+203.0.113.2/24  no gw
+</code></pre><pre><code>ip addr add 203.0.113.2/24 dev eth1
+echo 1 &gt;  /proc/sys/net/ipv4/ip_forward
+iptables -t nat-A POSTROUTING -s 203.0.113.0/24  -j SNAT --to 192.168.1.101
+</code></pre><pre><code>&#x6307;&#x5411;&#x7F51;&#x5173; 203.0.113.1 &#x7684;&#x8BBE;&#x5907; &#x4F1A;&#x62A5;&#x9519;
+
+[root@controller ~]# ip netns exec qrouter-6c2e391b-22f1-4692-a4d7-bfd24599c600   ping     114.114.114.114
+PING 114.114.114.114 (114.114.114.114) 56(84) bytes of data.
+64 bytes from 114.114.114.114: icmp_seq=1 ttl=71 time=26.3 ms
+From 203.0.113.1 icmp_seq=2 Redirect Host(New nexthop: 203.0.113.2)
+From 203.0.113.1: icmp_seq=2 Redirect Host(New nexthop: 203.0.113.2)
+64 bytes from 114.114.114.114: icmp_seq=2 ttl=78 time=25.9 ms
+From 203.0.113.1: icmp_seq=3 Redirect Host(New nexthop: 203.0.113.2)
+From 203.0.113.1 icmp_seq=3 Redirect Host(New nexthop: 203.0.113.2)
+64 bytes from 114.114.114.114: icmp_seq=3 ttl=89 time=25.9 ms
+From 203.0.113.1 icmp_seq=4 Redirect Host(New nexthop: 203.0.113.2)
+From 203.0.113.1: icmp_seq=4 Redirect Host(New nexthop: 203.0.113.2)
+64 bytes from 114.114.114.114: icmp_seq=4 ttl=70 time=25.9 ms
+From 203.0.113.1 icmp_seq=5 Redirect Host(New nexthop: 203.0.113.2)
+From 203.0.113.1: icmp_seq=5 Redirect Host(New nexthop: 203.0.113.2)
+64 bytes from 114.114.114.114: icmp_seq=5 ttl=63 time=26.1 ms
+</code></pre><p>&#x6545;&#x969C;&#x590D;&#x73B0;  &#x5220;&#x9664;apr &#x8BB0;&#x5F55; &#x91CD;&#x65B0;&#x5B66;&#x4E60;</p>
+<p>vm1 </p>
+<pre><code>ip netns exec qrouter-6c2e391b-22f1-4692-a4d7-bfd24599c600   arp -d 203.0.113.1
+ip netns exec qrouter-6c2e391b-22f1-4692-a4d7-bfd24599c600   arp -d 203.0.113.2
+ip netns exec qrouter-6c2e391b-22f1-4692-a4d7-bfd24599c600   arp -n
+[root@controller ~]#   &#x7A7A;
+</code></pre><p>vm2</p>
+<pre><code>arp -d 203.0.113.2
+</code></pre><pre><code>icmp&#x91CD;&#x5B9A;&#x5411;
+
+ICMP&#x91CD;&#x5B9A;&#x5411;&#x62A5;&#x6587;&#x662F;ICMP&#x63A7;&#x5236;&#x62A5;&#x6587;&#x4E2D;&#x7684;&#x4E00;&#x79CD;&#x3002;&#x5728;&#x7279;&#x5B9A;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5F53;&#x8DEF;&#x7531;&#x5668;&#x68C0;&#x6D4B;&#x5230;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4F7F;&#x7528;&#x975E;&#x4F18;&#x5316;&#x8DEF;&#x7531;&#x7684;&#x65F6;&#x5019;&#xFF0C;
+&#x5B83;&#x4F1A;&#x5411;&#x8BE5;&#x4E3B;&#x673A;&#x53D1;&#x9001;&#x4E00;&#x4E2A;ICMP&#x91CD;&#x5B9A;&#x5411;&#x62A5;&#x6587;&#xFF0C;&#x8BF7;&#x6C42;&#x4E3B;&#x673A;&#x6539;&#x53D8;&#x8DEF;&#x7531;&#x3002;&#x8DEF;&#x7531;&#x5668;&#x4E5F;&#x4F1A;&#x628A;&#x521D;&#x59CB;&#x6570;&#x636E;&#x5305;&#x5411;&#x5B83;&#x7684;&#x76EE;&#x7684;&#x5730;&#x8F6C;&#x53D1;&#x3002;
+
+
+&#x53D1;&#x751F;ICMP&#x91CD;&#x5B9A;&#x5411;&#x901A;&#x5E38;&#x6709;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;
+1)&#x5F53;&#x8DEF;&#x7531;&#x5668;&#x4ECE;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x6536;&#x5230;&#x6570;&#x636E;&#x8FD8;&#x9700;&#x8981;&#x4ECE;&#x76F8;&#x540C;&#x63A5;&#x53E3;&#x8F6C;&#x53D1;&#x8BE5;&#x6570;&#x636E;&#x65F6;&#xFF1B;
+2)&#x5F53;&#x8DEF;&#x7531;&#x5668;&#x4ECE;&#x67D0;&#x4E2A;&#x63A5;&#x53E3;&#x5230;&#x53D1;&#x5F80;&#x8FDC;&#x7A0B;&#x7F51;&#x7EDC;&#x7684;&#x6570;&#x636E;&#x65F6;&#x53D1;&#x73B0;&#x6E90;ip&#x5730;&#x5740;&#x4E0E;&#x4E0B;&#x4E00;&#x8DF3;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x7F51;&#x6BB5;&#x65F6;&#x3002;
+
+
+
+
+
+ICMP &#x91CD;&#x5B9A;&#x5411;&#x6D88;&#x606F;&#xFF1A;&#x5982;&#x679C;&#x8DEF;&#x7531;&#x5668;&#x53D1;&#x73B0;&#x53D1;&#x9001;&#x7AEF;&#x4E3B;&#x673A;&#x4F7F;&#x7528;&#x6B21;&#x4F18;&#x7684;&#x8DEF;&#x5F84;&#x53D1;&#x9001;&#x6570;&#x636E;&#x65F6;&#xFF0C;&#x90A3;&#x4E48;&#x5B83;&#x4F1A;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A; ICMP &#x91CD;&#x5B9A;&#x5411;&#x6D88;&#x606F;&#x7ED9;&#x8FD9;&#x4E2A;&#x4E3B;&#x673A;&#xFF0C;
+&#x8FD9;&#x4E2A;&#x6D88;&#x606F;&#x5305;&#x542B;&#x4E86;&#x6700;&#x5408;&#x9002;&#x7684;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x548C;&#x6E90;&#x6570;&#x636E;&#x3002;&#x4E3B;&#x8981;&#x53D1;&#x751F;&#x5728;&#x8DEF;&#x7531;&#x5668;&#x6301;&#x6709;&#x66F4;&#x597D;&#x7684;&#x8DEF;&#x7531;&#x4FE1;&#x606F;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;
+&#x8DEF;&#x7531;&#x5668;&#x4F1A;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A; ICMP &#x91CD;&#x5B9A;&#x5411;&#x6D88;&#x606F;&#x7ED9;&#x53D1;&#x9001;&#x7AEF;&#x4E3B;&#x673A;&#x4E00;&#x4E2A;&#x66F4;&#x5408;&#x9002;&#x7684;&#x53D1;&#x9001;&#x8DEF;&#x7531;&#x3002;
+</code></pre>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../router/router.html" class="navigation navigation-prev " aria-label="Previous page: router">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../dummy/dummy.html" class="navigation navigation-next " aria-label="Next page: dummy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"icmp 重定向","level":"1.8","depth":1,"next":{"title":"dummy","level":"1.9","depth":1,"path":"dummy/dummy.md","ref":"dummy/dummy.md","articles":[]},"previous":{"title":"router","level":"1.7","depth":1,"path":"router/router.md","ref":"router/router.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"icmp/icmp.md","mtime":"2019-08-21T03:07:17.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-21T01:24:06.369Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+
+    </body>
+</html>
+

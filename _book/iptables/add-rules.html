@@ -1,0 +1,499 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>add rules · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="snat.html" />
+    
+    
+    <link rel="prev" href="iptables.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="iptables.html">
+            
+                <a href="iptables.html">
+            
+                    
+                    iptables
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="add-rules.html">
+            
+                <a href="add-rules.html">
+            
+                    
+                    add rules
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="snat.html">
+            
+                <a href="snat.html">
+            
+                    
+                    snat
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="delete-table.html">
+            
+                <a href="delete-table.html">
+            
+                    
+                    清除表
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ip/ip.html">
+            
+                <a href="../ip/ip.html">
+            
+                    
+                    ip 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../arp/arp.html">
+            
+                <a href="../arp/arp.html">
+            
+                    
+                    arp 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../brctl/brctl.html">
+            
+                <a href="../brctl/brctl.html">
+            
+                    
+                    brctl 命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../kvm/kvm-nat.html">
+            
+                <a href="../kvm/kvm-nat.html">
+            
+                    
+                    kvm 虚拟机 不走网关到一个宿主机的地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../router/router.html">
+            
+                <a href="../router/router.html">
+            
+                    
+                    router
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../icmp/icmp.html">
+            
+                <a href="../icmp/icmp.html">
+            
+                    
+                    icmp 重定向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../dummy/dummy.html">
+            
+                <a href="../dummy/dummy.html">
+            
+                    
+                    dummy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../basic/basic.html">
+            
+                <a href="../basic/basic.html">
+            
+                    
+                    basic
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >add rules</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x6DFB;&#x52A0;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x5230;&#x5C3E;&#x90E8;</p>
+<pre><code>iptables -A INPUT -t filter -s 192.168.1.5 -j DROP
+</code></pre><pre><code>iptables -L  INPUT -t filter  
+
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination         
+ACCEPT     udp  --  anywhere             anywhere             udp dpt:domain
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:domain
+ACCEPT     udp  --  anywhere             anywhere             udp dpt:bootps
+ACCEPT     tcp  --  anywhere             anywhere             tcp dpt:bootps
+DROP       all  --  192.168.1.5          anywhere
+</code></pre><pre><code>[root@localhost ~]# iptables -L  INPUT -t filter  -n
+Chain INPUT (policy ACCEPT)
+target     prot opt source               destination
+ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+DROP       all  --  192.168.1.5          0.0.0.0/0
+[root@localhost ~]# iptables -L  INPUT -t filter  -n --line-number
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination
+1    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+2    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+3    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+4    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+5    DROP       all  --  192.168.1.5          0.0.0.0/0
+</code></pre><p>&#x518D;&#x63D2;&#x5165;&#x4E00;&#x6761;&#x89C4;&#x5219;&#x4E3A;&#x7B2C;&#x4E94;&#x884C;&#xFF0C;&#x5C06;&#x884C;&#x6570;&#x76F4;&#x63A5;&#x5199;&#x5230;&#x89C4;&#x5219;&#x94FE;&#x7684;&#x540E;&#x9762;  &#x539F;&#x6765;&#x7B2C;&#x4E94;&#x884C;&#x81F3;&#x540E;&#x9762;&#x7684;&#x89C4;&#x5219;&#x4F1A;&#x5F80;&#x4E0B;&#x6392;</p>
+<pre><code>iptables -I INPUT  5 -t filter -s 192.168.1.6 -j DROP
+</code></pre><pre><code>iptables -L  INPUT -t filter  -n --line-number
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination
+1    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+2    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+3    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+4    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+5    DROP       all  --  192.168.1.6          0.0.0.0/0
+6    DROP       all  --  192.168.1.5          0.0.0.0/0
+</code></pre><p>&#x5220;&#x9664; 5   6</p>
+<p>&#x4F7F;&#x7528;&#x7F16;&#x53F7;&#x5220;&#x9664;</p>
+<pre><code>iptables -D INPUT 5 -t filter
+</code></pre><p>&#x4F7F;&#x7528;&#x8BED;&#x53E5;&#x5220;&#x9664;</p>
+<pre><code>iptables -D INPUT   -t filter -s 192.168.1.6 -j DROP
+iptables -D INPUT   -t filter -s 192.168.1.5 -j DROP
+</code></pre><p>&#x4FEE;&#x6539;</p>
+<p>iptables -R INPUT 5 -j ACCEPT</p>
+<pre><code>iptables -L  INPUT -t filter  -n --line-number
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination         
+1    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+2    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+3    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+4    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+[root@localhost ~]# iptables -A INPUT -t filter -s 192.168.1.5 -j DROP
+[root@localhost ~]# iptables -L  INPUT -t filter  -n --line-number
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination         
+1    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+2    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+3    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+4    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+5    DROP       all  --  192.168.1.5          0.0.0.0/0           
+[root@localhost ~]# iptables -R INPUT 5 -j ACCEPT
+[root@localhost ~]# iptables -L  INPUT -t filter  -n --line-number
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination         
+1    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:53
+2    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:53
+3    ACCEPT     udp  --  0.0.0.0/0            0.0.0.0/0            udp dpt:67
+4    ACCEPT     tcp  --  0.0.0.0/0            0.0.0.0/0            tcp dpt:67
+5    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+</code></pre><h4 id="reject-with">reject-with</h4>
+<pre><code>iptables -A INPUT -p tcp -m tcp --dport 5555 -j REJECT --reject-with icmp-port-unreachable
+</code></pre><pre><code>iptables -L FORWARD -n -t filter --line-number
+Chain FORWARD (policy ACCEPT)
+num  target     prot opt source               destination
+1    ACCEPT     all  --  0.0.0.0/0            203.0.113.0/24       ctstate RELATED,ESTABLISHED
+2    ACCEPT     all  --  203.0.113.0/24       0.0.0.0/0
+3    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+4    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+5    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+6    ACCEPT     all  --  0.0.0.0/0            10.0.0.0/24          ctstate RELATED,ESTABLISHED
+7    ACCEPT     all  --  10.0.0.0/24          0.0.0.0/0
+8    ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+9    REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+10   REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+11   ACCEPT     all  --  0.0.0.0/0            192.168.122.0/24     ctstate RELATED,ESTABLISHED
+12   ACCEPT     all  --  192.168.122.0/24     0.0.0.0/0
+13   ACCEPT     all  --  0.0.0.0/0            0.0.0.0/0
+14   REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+15   REJECT     all  --  0.0.0.0/0            0.0.0.0/0            reject-with icmp-port-unreachable
+</code></pre><pre><code>iptables -A FORWARD -t filter -s 0.0.0.0/0 -d 0.0.0.0/0 -j REJECT --reject-with icmp-port-unreachable
+</code></pre><pre><code>iptables -L FORWARD -n -t filter --line-number
+</code></pre><p>&#x5220;&#x9664;</p>
+<pre><code>iptables -D  FORWARD -t filter -s 0.0.0.0/0 -d 0.0.0.0/0 -j REJECT --reject-with icmp-port-unreachable
+</code></pre>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="iptables.html" class="navigation navigation-prev " aria-label="Previous page: iptables">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="snat.html" class="navigation navigation-next " aria-label="Next page: snat">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"add rules","level":"1.2.1","depth":2,"next":{"title":"snat","level":"1.2.2","depth":2,"path":"iptables/snat.md","ref":"iptables/snat.md","articles":[]},"previous":{"title":"iptables","level":"1.2","depth":1,"path":"iptables/iptables.md","ref":"iptables/iptables.md","articles":[{"title":"add rules","level":"1.2.1","depth":2,"path":"iptables/add-rules.md","ref":"iptables/add-rules.md","articles":[]},{"title":"snat","level":"1.2.2","depth":2,"path":"iptables/snat.md","ref":"iptables/snat.md","articles":[]},{"title":"清除表","level":"1.2.3","depth":2,"path":"iptables/delete-table.md","ref":"iptables/delete-table.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"iptables/add-rules.md","mtime":"2019-08-21T06:07:29.592Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-21T01:24:06.369Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+
+    </body>
+</html>
+
