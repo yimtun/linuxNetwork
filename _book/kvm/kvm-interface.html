@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>kvm 虚拟机 不走网关到一个宿主机的地址 · GitBook</title>
+        <title>kvm 网络重启 虚拟机接口从宿主机网桥被摘下 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -61,10 +61,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="kvm-interface.html" />
+    <link rel="next" href="../router/router.html" />
     
     
-    <link rel="prev" href="../brctl/brctl.html" />
+    <link rel="prev" href="kvm-nat.html" />
     
 
     </head>
@@ -216,7 +216,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="kvm-nat.html">
+        <li class="chapter " data-level="1.6" data-path="kvm-nat.html">
             
                 <a href="kvm-nat.html">
             
@@ -229,7 +229,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7" data-path="kvm-interface.html">
+        <li class="chapter active" data-level="1.7" data-path="kvm-interface.html">
             
                 <a href="kvm-interface.html">
             
@@ -337,7 +337,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >kvm 虚拟机 不走网关到一个宿主机的地址</a>
+        <a href=".." >kvm 网络重启 虚拟机接口从宿主机网桥被摘下</a>
     </h1>
 </div>
 
@@ -352,29 +352,18 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>kvm nat1  nat2</p>
-<pre><code>vm1 nat1
-ping nat2 gw  &#x4E0D;&#x8D70;nat1 &#x7F51;&#x5173;&#x76F4;&#x63A5;&#x5230;&#x8FBE; nat2&#x7684;&#x7F51;&#x5173; &#x4E5F;&#x5C31;&#x662F;nat2 &#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5730;&#x5740;
-</code></pre><pre><code>[root@controller ~]# traceroute 203.0.113.229
-traceroute to 203.0.113.229 (203.0.113.229), 30 hops max, 60 byte packets
- 1  gateway (10.0.0.1)  0.564 ms  0.489 ms  0.446 ms
- 2  203.0.113.229 (203.0.113.229)  2.573 ms  2.538 ms  2.506 ms
-
-
-[root@controller ~]# traceroute 203.0.113.1         kvm &#x865A;&#x62DF;&#x673A;&#x5730;&#x5740;
-traceroute to 203.0.113.1 (203.0.113.1), 30 hops max, 60 byte packets
- 1  gateway (10.0.0.1)  1.079 ms  1.006 ms  0.960 ms
- 2  203.0.113.1 (203.0.113.1)  0.930 ms  0.900 ms  0.865 ms
-
-[root@controller ~]# traceroute 203.0.113.100  100  &#x662F;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;
-traceroute to 203.0.113.100 (203.0.113.100), 30 hops max, 60 byte packets
- 1  203.0.113.100 (203.0.113.100)  0.819 ms  0.668 ms  0.582 ms
-</code></pre><p>&#x5728;Linux&#x4E2D;&#x7684;&#x865A;&#x62DF;&#x673A;&#x7684;&#x7F51;&#x5361;&#x90FD;&#x5305;&#x542B;&#x524D;&#x534A;&#x6BB5;&#x548C;&#x540E;&#x534A;&#x6BB5;&#xFF0C;&#x524D;&#x534A;&#x6BB5;&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#xFF0C;&#x540E;&#x534A;&#x6BB5;&#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x3002;
-&#x4E0A;&#x56FE;eth0&#x4E3A;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;&#x7F51;&#x5361;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x540E;&#x534A;&#x6BB5;&#x4E3A;vnet0&#xFF0C;vnet0&#x4E3A;tap&#x8BBE;&#x5907;&#x3002;
-&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x6240;&#x6709;&#x53D1;&#x5F80;eth0&#x7684;&#x6570;&#x636E;&#x5C31;&#x76F4;&#x63A5;&#x53D1;&#x5F80;vnet0&#x4E86;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5C06;vnet0&#x770B;&#x4F5C;&#x4E00;&#x5757;&#x7F51;&#x5361;&#x3002;</p>
-<p>&#x5728;&#x5BBF;&#x4E3B;&#x673A;&#x4E2D;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6865;&#x8BBE;&#x5907;&#xFF0C;&#x628A;&#x5BBF;&#x4E3B;&#x673A;&#x7684;eth0&#x653E;&#x5728;&#x6865;&#x4E0A;&#xFF0C;&#x8FD9;&#x6837;&#x865A;&#x62DF;&#x673A;&#x4E0A;&#x7684;eth0&#x5C06;&#x62A5;&#x6587;&#x53D1;&#x7ED9;vnet0&#xFF0C;
-&#x518D;&#x76F4;&#x63A5;&#x53D1;&#x7ED9;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;eth0&#xFF0C;&#x5C06;&#x6E90;&#x5730;&#x5740;&#x6539;&#x4E3A;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x7684;eth0&#x7684;&#x5730;&#x5740;</p>
-
+                                <pre><code>[root@localhost ~]# ip a | grep vnet0
+51: vnet0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast state UNKNOWN group default qlen 1000
+[root@localhost ~]# ip a | grep vnet1
+52: vnet1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast master virbr-203 state UNKNOWN group default qlen 1000
+[root@localhost ~]# brctl  addif virbr-10 vnet0
+[root@localhost ~]# ps -ef |grep qemu | grep vnet0
+[root@localhost ~]# ip a | grep vnet1
+52: vnet1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast master virbr-203 state UNKNOWN group default qlen 1000
+[root@localhost ~]# ip a | grep vnet0
+51: vnet0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc pfifo_fast master virbr-10 state UNKNOWN group default qlen 1000
+[root@localhost ~]#
+</code></pre>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
                                 </section>
@@ -402,12 +391,12 @@ traceroute to 203.0.113.100 (203.0.113.100), 30 hops max, 60 byte packets
 
             
                 
-                <a href="../brctl/brctl.html" class="navigation navigation-prev " aria-label="Previous page: brctl 命令">
+                <a href="kvm-nat.html" class="navigation navigation-prev " aria-label="Previous page: kvm 虚拟机 不走网关到一个宿主机的地址">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="kvm-interface.html" class="navigation navigation-next " aria-label="Next page: kvm 网络重启 虚拟机接口从宿主机网桥被摘下">
+                <a href="../router/router.html" class="navigation navigation-next " aria-label="Next page: router">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -418,7 +407,7 @@ traceroute to 203.0.113.100 (203.0.113.100), 30 hops max, 60 byte packets
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"kvm 虚拟机 不走网关到一个宿主机的地址","level":"1.6","depth":1,"next":{"title":"kvm 网络重启 虚拟机接口从宿主机网桥被摘下","level":"1.7","depth":1,"path":"kvm/kvm-interface.md","ref":"kvm/kvm-interface.md","articles":[]},"previous":{"title":"brctl 命令","level":"1.5","depth":1,"path":"brctl/brctl.md","ref":"brctl/brctl.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"kvm/kvm-nat.md","mtime":"2019-08-21T08:44:00.219Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-22T03:21:05.516Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"kvm 网络重启 虚拟机接口从宿主机网桥被摘下","level":"1.7","depth":1,"next":{"title":"router","level":"1.8","depth":1,"path":"router/router.md","ref":"router/router.md","articles":[]},"previous":{"title":"kvm 虚拟机 不走网关到一个宿主机的地址","level":"1.6","depth":1,"path":"kvm/kvm-nat.md","ref":"kvm/kvm-nat.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["-search","-sharing","theme-default","-lunr","fontsettings","livereload","popup","splitter","copy-code-button","highlight","-expandable-chapters-small","chapter-fold","back-to-top-button","search-pro","-expandable-chapters","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"popup":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"copy-code-button":{},"theme-default":{"showLevel":false,"styles":{"ebook":"styles/ebook.css","epub":"styles/epub.css","mobi":"styles/mobi.css","pdf":"styles/pdf.css","print":"styles/print.css","website":"styles/website.css"}}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css"}},"file":{"path":"kvm/kvm-interface.md","mtime":"2019-08-21T08:46:18.877Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-22T03:21:05.516Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

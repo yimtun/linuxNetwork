@@ -24,3 +24,30 @@ iptables -P FORWARD ACCEPT -t filter
 ```
 iptables -F FORWARD -t filter
 ```
+
+
+删除一条规则
+
+```
+iptables -t nat -L  --line-numbers
+
+iptables -t nat -L -n  --line-numbers
+
+iptables -t nat -L  --line-numbers
+Chain PREROUTING (policy ACCEPT)
+num  target     prot opt source               destination         
+1    DNAT       tcp  --  anywhere             localhost.localdomain  tcp dpt:ms-wbt-server to:172.16.101.249:3389
+2    DNAT       tcp  --  anywhere             localhost.localdomain  tcp dpt:http to:10.255.0.6:80
+
+```
+
+```
+iptables  -t nat -D PREROUTING 2
+```
+
+
+
+
+
+
+
